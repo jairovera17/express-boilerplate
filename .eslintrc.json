@@ -1,0 +1,75 @@
+{
+    "env": {
+      "browser": true,
+      "es6": true
+    },
+    "ignorePatterns": [
+      "src/templates/theme.ts",
+      "src/templates/thememui.ts",
+      "pages/api/citiesCatalog.ts",
+      "pages/api/departmentsCatalog.ts",
+      "jest.config.js",
+      "jest.global.jsx",
+      "**/*.css",
+      "**/*.svg",
+      "**/*.png",
+      "**/*.jpg",
+      "**/*.styles.*"
+    ],
+    "extends": [
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:prettier/recommended"
+    ],
+    "globals": {
+      "Atomics": "readonly",
+      "SharedArrayBuffer": "readonly"
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "ecmaVersion": 2018,
+      "sourceType": "module"
+    },
+    "plugins": ["@typescript-eslint"],
+    "rules": {
+      "quotes": ["error", "double"],
+      "semi": ["error", "always"],
+      "no-console": ["warn"],
+      "no-debugger": "error",
+      "no-unused-vars": ["off"],
+      "no-undef": ["off"],
+      "no-restricted-imports": [
+        "error",
+        {
+          "patterns": ["@mui/*/*/*", "!@mui/material/test-utils/*"]
+        }
+      ],
+      "@typescript-eslint/no-explicit-any": ["warn"],
+      "@typescript-eslint/no-unused-vars": ["error"],
+      "sort-keys": [
+        "error",
+        "asc",
+        {
+          "caseSensitive": false,
+          "natural": false,
+          "minKeys": 2
+        }
+      ],
+      "@typescript-eslint/no-use-before-define": "error",
+      "no-var": "error",
+      "sort-imports": [
+        "error",
+        {
+          "ignoreCase": true,
+          "ignoreDeclarationSort": true,
+          "ignoreMemberSort": false,
+          "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
+        }
+      ],
+      "newline-after-var": "error",
+      "newline-before-return": "error"
+    }
+  }
+  
