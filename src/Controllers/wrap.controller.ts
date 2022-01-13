@@ -1,5 +1,6 @@
 import { NextFunction, Request, Response } from "express";
-import { Observable, reduce } from "rxjs";
+import { Observable } from "rxjs";
+import { reduce } from "rxjs/operators";
 
 function wrapController<T>($handler: (req: Request) => Observable<T>) {
   return (req: Request, res: Response, next: NextFunction) => {
